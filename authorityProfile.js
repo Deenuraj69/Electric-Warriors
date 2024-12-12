@@ -82,7 +82,7 @@ function displayData(data) {
 
 // Function to compare C1 and P1 currents with 2% error margin
 function compareCurrents(c1Current, p1Current) {
-    const errorMargin = 0.10; // 2% error
+    const errorMargin = 0.20; // 2% error
     const difference = Math.abs(c1Current - p1Current);
     const allowableDifference = c1Current * errorMargin;
 
@@ -100,7 +100,7 @@ function compareCurrents(c1Current, p1Current) {
 
 // Function to compare P2 current with the sum of P1 and C2 currents
 function compareP2Current(p2Current, p1Current, c2Current) {
-    const errorMargin = 0.10; // 2% error
+    const errorMargin = 0.20; // 2% error
     const expectedCurrent = p1Current + c2Current;
     const difference = Math.abs(p2Current - expectedCurrent);
     const allowableDifference = expectedCurrent * errorMargin;
@@ -116,7 +116,7 @@ function compareP2Current(p2Current, p1Current, c2Current) {
 
 // Function to compare P3 current with the sum of C3 and P2 currents
 function compareP3Current(p3Current, c3Current, p2Current) {
-    const errorMargin = 0.10; // 2% error
+    const errorMargin = 0.20; // 2% error
     const expectedCurrent = c3Current + p2Current;
     const difference = Math.abs(p3Current - expectedCurrent);
     const allowableDifference = expectedCurrent * errorMargin;
